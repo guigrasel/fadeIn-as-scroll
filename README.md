@@ -1,36 +1,39 @@
-# FadeIn according to scroll
+# FadeIn according to some event
 
-JavaScript function that makes automatic FadeIn animation (to any direction) as the user scrolls.
+JavaScript function that makes more easy to use animation (from any direction) as the user events.
+At this version when the event do not be defined, it are scroll by default
 
 ## animate.css
 
-- The animations are imported from the animation library animate.css, so it must be installed in your project.
+- The animations are imported from the animation library animate.css, so it must be avaliable in your project.
 - For more information access: https://animate.style/
 
 ## How it works?
 
-To enable animation, just add the reveal class to the html element.
+To enable animation, just add one of these reveal class to the html element.
 
 ### Available classes:
 
-```js
+```javascript
 fadeInAnimations = [
-	'.reveal',
-	'.reveal-up',
-	'.reveal-left',
-  '.reveal-left-big',
-	'.reveal-right',
-  '.reveal-right-big,'
-	'.reveal-bottom-right',
-	'.reveal-top-right',
-	'.reveal-top-left',
-	'.reveal-bottom-left',
+'.reveal', // to only fadeIn
+'.reveal-up', // to fadeIn comming from up
+'.reveal-left', // ...from left
+'.reveal-left-big',
+'.reveal-right',
+'.reveal-right-big,'
+'.reveal-bottom-right',
+'.reveal-top-right',
+'.reveal-top-left',
+'.reveal-bottom-left',
 ];
 ```
 
+all classes above, are from animate.css, and the animation is from there, this function just monitore the files and add listners to make it runs, based on defined event.
+
 ### ATTENTION!
 
-For the best functioning of the animation, add this in your css file:
+To make animations appears, add this in your css(global) file:
 
 ```css
 .reveal-right,
